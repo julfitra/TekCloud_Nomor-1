@@ -1,28 +1,19 @@
-# Podman: Alternatif Docker untuk Manajemen Kontainer
+# Containerd
 
-Podman itu mirip dengan docker sama sama sebuah container engine, bahkan command untuk menjalankan sebuah container pun mirip. Podman adalah container engine open source yang berjalan tanpa daemon untuk mengembangkan, mengelola, dan menjalankan sebuah container OCI di GNU/Linux. Kontainer dapat dijalankan sebagai root atau dalam mode tanpa root. 
+Containerd pada awalnya dibuat sebagai manajer runtime lapisan rendah untuk mesin Docker. Kasus penggunaan containerd terbesar adalah sebagai lapisan antara mesin Docker dan eksekutor runc OCI. Perusahaan pengembang teknologi kontainer (container) di sebuah layanan komputasi awan bernama Docker kini telah menawarkan sebuah solusi bernama Containerd. Containerd adalah sebuah runtime kontainer standar industri yang fokus pada kesederhanaan, ketahanan, dan portabilitas. Ini berarti ia adalah perangkat lunak yang bertanggung jawab untuk menjalankan kontainer. Karena containerd berfokus pada kasus penggunaan operasional, seperti menjalankan kontainer di server, maka ia mengelola siklus hidup kontainer secara lengkap dari sistem host-nya, mulai dari penyimpanan dan transfer image hingga eksekusi dan pengawasan kontainer. 
 
-## Fitur Utama
+## Fungsi Utama Containerd
 
-1. **Tanpa Daemon**
-   Podman tidak memerlukan daemon atau layanan latar belakang yang berjalan terus-menerus. Setiap perintah Podman dijalankan sebagai proses independen, membuatnya lebih ringan dan lebih mudah diatur.
+1. **Mengelola siklus hidup kontainer**: Dari mulai pembuatan, menjalankan, hingga menghentikan kontainer.
 
-2. **Kompatibilitas Docker CLI**
-   Podman menawarkan kompatibilitas dengan perintah Docker CLI. Ini berarti Anda dapat menggunakan perintah Docker seperti `podman run`, `podman build`, dan `podman ps` untuk melakukan tugas yang sama seperti yang Anda lakukan dengan Docker.
+2. **Mengunduh dan membuka kemasan gambar kontainer**: Mendapatkan dan mempersiapkan gambar kontainer untuk dijalankan.
 
-3. **Rootless Containers**
-   Podman mendukung kontainer tanpa hak istimewa, yang memungkinkan pengguna untuk menjalankan dan mengelola kontainer tanpa memerlukan akses root. Ini meningkatkan keamanan dengan membatasi akses yang diperlukan.
+3. **Mengawasi kontainer**: Memantau kinerja dan status kontainer.
 
-4. **Integrasi dengan Systemd**
-   Podman dapat digunakan dengan Systemd untuk mengelola kontainer sebagai layanan sistem. Ini memungkinkan integrasi yang mulus dengan sistem init di Linux.
+## Keuntungan Menggunakan Containerd
+1. **Kinerja yang lebih baik**: Karena fokus pada inti fungsionalitas, containerd cenderung lebih cepat dan efisien daripada Docker.
+2. **Portabilitas**: Dapat digunakan dengan berbagai platform dan sistem operasi.
+Keamanan yang lebih baik: Dengan fokus pada keamanan, containerd membantu melindungi aplikasi Anda
 
-## Keunggulan Podman
+## Pemantauan dan Konfigurasi Kinerja Containerd
 
-1. **Tidak memerlukan daemon**: Salah satu keunggulan utama yang ditawarkan oleh podman adalah tidak adanya daemon, ini membuat podman lebih ringan dan aman.
-2. **Keamanan**: Podman memisahkan container sebagai proses individu, ini berarti podman menjalankan container sebagai proses terpisah didalam sistem operasi, dan juga meningkatkan keamanan karena tidak memerlukan hakl istimewa root untuk menjalanakan container.
-3. **Compatible dengan Docker**: Podman komatibel dengan Docker, disini berarti perintah-perintah yang ada pada podman mirip dengan yang ada pada docker.
-4. **Alternative docker**: Dalam beberapa skenario pengembangan, podman ini menjadi pilihan yang sangat menarik apalagi untuk project-project yang tidak memerlukan hak istimewa root.
-5. **Management Container yang Fleksibel**: Podman memungkinkan pengguna untuk lebih fleksibel dalam management container dengan dukungan yang baik untuk menyimpan dan mengelola container pada file system yang berbeda.
-
-## Kesimpulan
-Podaman menjadi alternative yang menarik yang dapat menjadi pilihan bagi para developer yang mengutamakan kemanan, fleksibilitas dan keterbukaan. Meskipun demikian, keputussan untuk menggunakan podman atau docker tetap bergantung pada kebutuhan dan spesifikasi dari proyek dari developer itu sendiri.
