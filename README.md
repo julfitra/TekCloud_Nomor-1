@@ -12,6 +12,7 @@ Perusahaan pengembang teknologi kontainer (container) di sebuah layanan komputas
 
 ## Keuntungan Menggunakan Containerd
 1. **Kinerja yang lebih baik**: Karena fokus pada inti fungsionalitas, containerd cenderung lebih cepat dan efisien daripada Docker.
+
 2. **Portabilitas**: Dapat digunakan dengan berbagai platform dan sistem operasi.
 Keamanan yang lebih baik: Dengan fokus pada keamanan, containerd membantu melindungi aplikasi Anda
 
