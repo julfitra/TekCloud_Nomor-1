@@ -15,5 +15,3 @@ Perusahaan pengembang teknologi kontainer (container) di sebuah layanan komputas
 2. **Portabilitas**: Dapat digunakan dengan berbagai platform dan sistem operasi.
 Keamanan yang lebih baik: Dengan fokus pada keamanan, containerd membantu melindungi aplikasi Anda
 
-## Pemantauan dan Konfigurasi Kinerja Containerd
-
